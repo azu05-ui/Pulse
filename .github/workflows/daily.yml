@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Pulse - Daily Summary Bot
 
 on:
@@ -30,3 +31,6 @@ jobs:
         with:
           name: daily-summary
           path: daily_summary.txt
+=======
+
+>>>>>>> 2e70922440fc3b5f590157e5fab2ec1d6cc615dd
