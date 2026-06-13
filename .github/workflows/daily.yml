@@ -34,3 +34,11 @@ jobs:
         with:
           name: daily-summary
           path: daily_summary.txt
+
+      - name: Send email
+        run: python send_email.py
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }} 
+         
