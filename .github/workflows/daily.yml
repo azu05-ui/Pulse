@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 name: Pulse - Daily Summary Bot
 
 on:
   schedule:
     - cron: '30 2 * * *'
-
   workflow_dispatch:
 
 jobs:
@@ -21,16 +19,18 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
 
       - name: Run Pulse bot
         run: python bot.py
+
+      - name: Debug files
+        run: ls -la
 
       - name: Upload summary as artifact
         uses: actions/upload-artifact@v4
         with:
           name: daily-summary
           path: daily_summary.txt
-=======
-
->>>>>>> 2e70922440fc3b5f590157e5fab2ec1d6cc615dd
