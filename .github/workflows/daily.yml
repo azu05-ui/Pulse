@@ -24,7 +24,7 @@ jobs:
           pip install requests
 
       - name: Run Pulse bot
-        run: python bot.py
+        run: python -u bot.py
 
       - name: Debug files
         run: ls -la
